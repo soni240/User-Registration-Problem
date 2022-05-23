@@ -1,12 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC4_Mobile_Format
+namespace UC5_Valid_Password_Rule1
 {
     class Program
     {
