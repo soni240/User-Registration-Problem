@@ -5,16 +5,18 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace UC1_First_Name
+namespace UC2_Last_Name
 {
     internal class RegexSample
     {
         string pattern = "^[A-Za-z]{3,}$";
-       public void Validating()
+        public void Validating()
         {
-          //  Regex regex = new Regex(pattern);
+            Regex regex = new Regex(pattern);
             Console.WriteLine("Validating the first name");
             ValidatingFirstName();
+            Console.WriteLine("Validating The Last Name");
+            ValidatingLastName();
 
         }
 
@@ -35,7 +37,23 @@ namespace UC1_First_Name
                 Console.WriteLine("Invalid");
             }
         }
+        public void ValidatingLastName()
+        {
+            Regex regex = new Regex(pattern);
+            Console.WriteLine("Enter the last name : ");
+            string input1 = Console.ReadLine();
+            bool res1 = regex.IsMatch(input1);
+            if (res1)
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+        }
     }
 }
+
     
 
