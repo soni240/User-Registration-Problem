@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC2_Last_Name
+namespace UC3_Valid_Email
 {
     class Program
     {
@@ -17,3 +17,4 @@ namespace UC2_Last_Name
         }
     }
 }
+

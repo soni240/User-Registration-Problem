@@ -5,11 +5,13 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace UC2_Last_Name
+namespace UC3_Valid_Email
 {
     internal class RegexSample
     {
         string pattern = "^[A-Za-z]{3,}$";
+
+
         public void Validating()
         {
             Regex regex = new Regex(pattern);
@@ -17,6 +19,8 @@ namespace UC2_Last_Name
             ValidatingFirstName();
             Console.WriteLine("Validating The Last Name");
             ValidatingLastName();
+            Console.WriteLine("Validating Email Address");
+            ValidatingEmailId();
 
         }
 
@@ -50,6 +54,22 @@ namespace UC2_Last_Name
             else
             {
                 Console.WriteLine("Invalid");
+            }
+        }
+        public void ValidatingEmailId()
+        {
+            string emailPattern = (@"^[a-zA-Z0-9]+([\.\+\-][a-zA-Z0-9]+)?@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,}(\.[a-zA-Z]+)?)$");
+            Regex regex = new Regex(emailPattern);
+            Console.WriteLine("Enter email Id");
+            string emails = Console.ReadLine();
+            bool res = regex.IsMatch(emails);
+            if (res)
+            {
+                Console.WriteLine("valid email address");
+            }
+            else
+            {
+                Console.WriteLine("Please enter a Valid Email!");
             }
         }
     }
