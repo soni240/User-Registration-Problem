@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC8_One_Special_Character
+namespace UC9_Email_Sample
 {
     class Program
     {
@@ -17,3 +17,4 @@ namespace UC8_One_Special_Character
         }
     }
 }
+
