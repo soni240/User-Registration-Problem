@@ -1,11 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC5_Valid_Password_Rule1
+namespace UC6_AtLeast_One_UpperCase
 {
     class Program
     {

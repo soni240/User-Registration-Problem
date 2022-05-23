@@ -5,11 +5,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace UC5_Valid_Password_Rule1
+namespace UC6_AtLeast_One_UpperCase
 {
     internal class RegexSample
     {
-        string pattern = "^[A-Za-z]{2,}$";
+        string pattern = "^[A-Za-z]{3,}$";
 
 
         public void Validating()
@@ -102,9 +102,10 @@ namespace UC5_Valid_Password_Rule1
         }
         public void ValidatingPassWord()
         {
-            string passwordPattern = @"[a-z,A-Z,0-9]{8,}$";
+            //string passwordPattern = @"[a-z,A-Z,0-9]{8,}$";
+            string passwordPattern = @"^(?=.*[A-Z]).{8,}$";
             Regex regex = new Regex(passwordPattern);
-            Console.WriteLine("Enter password minimum 8 characters");
+            Console.WriteLine("Enter password minimum 8 characters with one upper case");
             string password = Console.ReadLine();
             bool res = regex.IsMatch(password);
             if (res)
