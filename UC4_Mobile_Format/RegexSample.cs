@@ -5,11 +5,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace UC3_Valid_Email
+namespace UC4_Mobile_Format
 {
     internal class RegexSample
     {
-        string pattern = "^[A-Za-z]{3,}$";
+        string pattern = "^[A-Za-z]{2,}$";
 
 
         public void Validating()
@@ -21,6 +21,8 @@ namespace UC3_Valid_Email
             ValidatingLastName();
             Console.WriteLine("Validating Email Address");
             ValidatingEmailId();
+            Console.WriteLine("Validating Phone Number");
+            ValidatingPhoneNum();
 
         }
 
@@ -71,6 +73,24 @@ namespace UC3_Valid_Email
             {
                 Console.WriteLine("Please enter a Valid Email!");
             }
+        }
+        public void ValidatingPhoneNum()
+        {
+            string phoneNumPattern = @"^[0-9]+[\s]+[0-9]{10}$";
+            Regex regex = new Regex(phoneNumPattern);
+            Console.WriteLine("Enter valid Phone Number");
+            string phoneNumber = Console.ReadLine();
+            bool res = regex.IsMatch(phoneNumber);
+            if (res)
+            {
+                Console.WriteLine("valid email address");
+            }
+            else
+            {
+                Console.WriteLine("Please enter a Valid Email!");
+            }
+
+
         }
     }
 }
