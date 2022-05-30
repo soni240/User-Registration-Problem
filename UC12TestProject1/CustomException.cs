@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC10TestProject1
+namespace UC12TestProject1
 {
     public class CustomException:Exception
     {
@@ -13,7 +13,7 @@ namespace UC10TestProject1
 
         public enum ExceptionType
         {
-            NULL_MESSAGE, EMPTY_MESSAGE, INVALID_MESSAGE
+            NULL_MESSAGE, EMPTY_MESSAGE, INVALID_MESSAGE, NO_SUCH_CLASS, NO_CONSTRUCTOR_FOUND
         }
         public CustomException(ExceptionType type, string message) : base(message)
         {
